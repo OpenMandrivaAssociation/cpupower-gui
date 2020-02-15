@@ -28,7 +28,7 @@ This program is designed to allow you to change the frequency limits of your cpu
 %autosetup -p1
 
 %build
-%meson
+%meson  -Dsystemddir=/usr/lib/systemd --buildtype=plain 
 %meson_build
 
 %install
