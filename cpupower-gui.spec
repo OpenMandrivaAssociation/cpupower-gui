@@ -1,3 +1,5 @@
+%define _userunitdir /lib/systemd/
+
 Name:		cpupower-gui
 Version:	0.8.0
 Release:	1
