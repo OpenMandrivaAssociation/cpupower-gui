@@ -48,4 +48,4 @@ This program is designed to allow you to change the frequency limits of your cpu
 %{_datadir}/metainfo/org.rnd2.cpupower_gui.appdata.xml
 %{_datadir}/polkit-1/actions/org.rnd2.cpupower-gui.policy
 /var/lib/polkit-1/localauthority/10-vendor.d/org.rnd2.cpupower-gui.pkla
-/lib/system/cpupower-gui-helper.service
+#lib/system/cpupower-gui-helper.service
