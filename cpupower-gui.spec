@@ -50,4 +50,4 @@ rm -rf  %{buildroot}/var/lib/polkit-1/localauthority/10-vendor.d/org.rnd2.cpupow
 %{_datadir}/locale/*
 %{_datadir}/metainfo/org.rnd2.cpupower_gui.appdata.xml
 %{_datadir}/polkit-1/actions/org.rnd2.cpupower-gui.policy
-%{_unitdir}/system/cpupower-gui-helper.service
+%{_userunitdir}/system/cpupower-gui-helper.service
