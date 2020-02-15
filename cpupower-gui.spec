@@ -28,11 +28,12 @@ This program is designed to allow you to change the frequency limits of your cpu
 %autosetup -p1
 
 %build
-%meson  -Dsystemddir=/usr/lib/systemd --buildtype=plain 
+%meson  -Dsystemddir=/lib/systemd --buildtype=plain 
 %meson_build
 
 %install
 %meson_install
+rm -rf  %{buildroot}/var/lib/polkit-1/localauthority/10-vendor.d/org.rnd2.cpupower-gui.pkla
 
 %files
 %{_bindir}/cpupower-gui
@@ -47,5 +48,4 @@ This program is designed to allow you to change the frequency limits of your cpu
 %{_datadir}/locale/*
 %{_datadir}/metainfo/org.rnd2.cpupower_gui.appdata.xml
 %{_datadir}/polkit-1/actions/org.rnd2.cpupower-gui.policy
-/var/lib/polkit-1/localauthority/10-vendor.d/org.rnd2.cpupower-gui.pkla
 %{_unitdir}/system/cpupower-gui-helper.service
