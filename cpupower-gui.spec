@@ -2,7 +2,7 @@ Name:		cpupower-gui
 Version:	0.8.0
 Release:	1
 License:	GPLv3.0
-Summary:	   cpupower-gui is a graphical program that is used to change the scaling frequency limits of the cpu, similar to cpupower. 
+Summary:	cpupower-gui is a graphical program that is used to change the scaling frequency limits of the cpu, similar to cpupower. 
 URL:		https://github.com/vagnum08/cpupower-gui
 Group:		System/Kernel and hardware
 Source0:	https://github.com/vagnum08/cpupower-gui/releases/download/v%{version}/%{name}-%{version}.tar.xz
@@ -48,4 +48,4 @@ This program is designed to allow you to change the frequency limits of your cpu
 %{_datadir}/metainfo/org.rnd2.cpupower_gui.appdata.xml
 %{_datadir}/polkit-1/actions/org.rnd2.cpupower-gui.policy
 /var/lib/polkit-1/localauthority/10-vendor.d/org.rnd2.cpupower-gui.pkla
-#lib/system/cpupower-gui-helper.service
+%{_unitdir}/system/cpupower-gui-helper.service
