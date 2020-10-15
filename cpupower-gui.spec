@@ -41,6 +41,9 @@ rm -rf  %{buildroot}/var/lib/polkit-1/localauthority/10-vendor.d/org.rnd2.cpupow
 %files
 %{_bindir}/cpupower-gui
 %{_libdir}/cpupower-gui/cpupower-gui-helper
+%{_sysconfdir}/cpupower_gui.conf
+%{_sysconfdir}/cpupower_gui.d/README
+%{_sysconfdir}/cpupower_gui.d/my_profile.profile.ex
 %{_datadir}/applications/org.rnd2.cpupower_gui.desktop
 %{_datadir}/cpupower-gui/*
 %{_datadir}/dbus-1/services/org.rnd2.cpupower_gui.service
@@ -51,4 +54,7 @@ rm -rf  %{buildroot}/var/lib/polkit-1/localauthority/10-vendor.d/org.rnd2.cpupow
 %{_datadir}/locale/*
 %{_datadir}/metainfo/org.rnd2.cpupower_gui.appdata.xml
 %{_datadir}/polkit-1/actions/org.rnd2.cpupower-gui.policy
+%{_datadir}/polkit-1/rules.d/org.rnd2.cpupower-gui.rules
 %{_userunitdir}/system/cpupower-gui-helper.service
+%{_userunitdir}/system/cpupower-gui.service
+%{_prefix}/systemd/user/cpupower-gui-user.service
