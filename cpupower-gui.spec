@@ -1,3 +1,4 @@
+%global debug_package %{nil}
 %define _userunitdir /lib/systemd/
 
 Name:		cpupower-gui
