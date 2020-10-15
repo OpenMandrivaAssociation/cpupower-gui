@@ -1,7 +1,7 @@
 %define _userunitdir /lib/systemd/
 
 Name:		cpupower-gui
-Version:	0.8.0
+Version:	0.9.0
 Release:	1
 License:	GPLv3.0
 Summary:	cpupower-gui is a graphical program that is used to change the scaling frequency limits of the cpu, similar to cpupower. 
