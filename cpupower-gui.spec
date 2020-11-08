@@ -13,14 +13,17 @@ Source0:	https://github.com/vagnum08/cpupower-gui/releases/download/v%{version}/
 BuildRequires:	meson
 BuildRequires:	ninja
 BuildRequires:	pkgconfig(glib-2.0)
+BuildRequires:  pkgconfig(libhandy-1)
 BuildRequires:  gettext-devel
 BuildRequires:  gettext
 BuildRequires:  pkgconfig
+BuildRequires:  python3dist(pyxdg)
 
 Requires:   python
 Requires:   gtk+3
 Requires:   python-dbus
 Requires:   python3dist(pygobject)
+Requires:   python3dist(pyxdg)
 Requires:   hicolor-icon-theme
 Requires:   polkit
 
