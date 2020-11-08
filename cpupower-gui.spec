@@ -2,7 +2,7 @@
 %define _userunitdir /lib/systemd/
 
 Name:		cpupower-gui
-Version:	0.9.1
+Version:	1.0.0
 Release:	1
 License:	GPLv3.0
 Summary:	cpupower-gui is a graphical program that is used to change the scaling frequency limits of the cpu, similar to cpupower. 
@@ -13,14 +13,17 @@ Source0:	https://github.com/vagnum08/cpupower-gui/releases/download/v%{version}/
 BuildRequires:	meson
 BuildRequires:	ninja
 BuildRequires:	pkgconfig(glib-2.0)
+BuildRequires:  pkgconfig(libhandy-1)
 BuildRequires:  gettext-devel
 BuildRequires:  gettext
 BuildRequires:  pkgconfig
+BuildRequires:  python3dist(pyxdg)
 
 Requires:   python
 Requires:   gtk+3
 Requires:   python-dbus
 Requires:   python3dist(pygobject)
+Requires:   python3dist(pyxdg)
 Requires:   hicolor-icon-theme
 Requires:   polkit
 
