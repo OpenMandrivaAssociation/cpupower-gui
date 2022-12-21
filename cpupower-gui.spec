@@ -26,12 +26,13 @@ Requires:   python3dist(pygobject)
 Requires:   python3dist(pyxdg)
 Requires:   hicolor-icon-theme
 Requires:   polkit
-
+Requires:   lib64handy-gir1
 %description
 This program is designed to allow you to change the frequency limits of your cpu and its governor. The application is similar in functionality to cpupower but use GTK GUI and CLI.
 
 %prep
 %autosetup -p1
+sed -i '15d' %{_builddir}/%{name}-%{version}/data/meson.build
 
 %build
 %meson  -Dsystemddir=/lib/systemd --buildtype=plain 
@@ -61,3 +62,9 @@ rm -rf  %{buildroot}/var/lib/polkit-1/localauthority/10-vendor.d/org.rnd2.cpupow
 %{_userunitdir}/system/cpupower-gui-helper.service
 %{_userunitdir}/system/cpupower-gui.service
 %{_prefix}/lib/systemd/user/cpupower-gui-user.service
+
+%post
+systemctl enable cpupower-gui-helper 
+
+%preun 
+systemctl disable cpupower-gui-helper cpupower-gui
